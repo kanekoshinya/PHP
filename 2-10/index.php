@@ -1,11 +1,11 @@
 <?php
 
-function sayHi($length,$width,$height) {
+function volume($length,$width,$height) {
     // 関数の中で定義する変数 => ローカル変数
     
     echo $length*$width*$height;
 }
 
-echo sayHi(5,10,8);
+echo volume(5,10,8);
 
 ?>
