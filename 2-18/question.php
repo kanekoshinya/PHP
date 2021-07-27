@@ -14,21 +14,24 @@ $answer3 = "select";
 <body>
 <div>
 <p>お疲れ様です<?php echo $name; ?>さん</p>
-<form action="answer.php" method="post">
+
 <!--フォームの作成 通信はPOST通信で-->
+<form action="answer.php" method="post">
 <h2>①ネットワークのポート番号は何番？</h2>
 <!--③ 問題のradioボタンを「foreach」を使って作成する-->
-  <?php
+
+	<?php
 	foreach( $question1 as $id => $value ){
 		echo "<input type=\"radio\" name=\"question1\" value=\"{$value}\"";
-	
 		echo ">";
 		echo $value;
 	}
-	?>
+	?> 
+
 
 <h2>②Webページを作成するための言語は？</h2>
 <!--③ 問題のradioボタンを「foreach」を使って作成する-->
+
 <?php
 	foreach( $question2 as $id => $value ){
 		echo "<input type=\"radio\" name=\"question2\" value=\"{$value}\"";
