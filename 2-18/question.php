@@ -19,37 +19,22 @@ $answer3 = "select";
 <form action="answer.php" method="post">
 <h2>①ネットワークのポート番号は何番？</h2>
 <!--③ 問題のradioボタンを「foreach」を使って作成する-->
-
-	<?php
-	foreach( $question1 as $id => $value ){
-		echo "<input type=\"radio\" name=\"question1\" value=\"{$value}\"";
-		echo ">";
-		echo $value;
-	}
-	?> 
-
+	<?php foreach($question1 as $value): ?>
+	<input type="radio" name="question1" value="<?php echo $value?>" /><?php echo $value?>
+	<?php endforeach ?>
 
 <h2>②Webページを作成するための言語は？</h2>
 <!--③ 問題のradioボタンを「foreach」を使って作成する-->
+<?php foreach($question2 as $value): ?>
+<input type="radio" name="question2" value="<?php echo $value?>" /><?php echo $value?>
+<?php endforeach ?>
 
-<?php
-	foreach( $question2 as $id => $value ){
-		echo "<input type=\"radio\" name=\"question2\" value=\"{$value}\"";
-	
-		echo ">";
-		echo $value;
-	}
-	?>
 <h2>③MySQLで情報を取得するためのコマンドは？</h2>
 <!--③ 問題のradioボタンを「foreach」を使って作成する-->
-<?php
-	foreach( $question3 as $id => $value ){
-		echo "<input type=\"radio\" name=\"question3\" value=\"{$value}\"";
-		
-		echo ">";
-		echo $value;
-	}
-	?>
+<?php foreach($question3 as $value): ?>
+<input type="radio" name="question3" value="<?php echo $value?>" /><?php echo $value?>
+<?php endforeach ?>
+
   <br>
 <!--問題の正解の変数と名前の変数を[answer.php]に送る-->
 <input type="hidden" name="name" value= <?php echo $name; ?>>
